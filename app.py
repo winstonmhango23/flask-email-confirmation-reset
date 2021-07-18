@@ -33,9 +33,9 @@ app.config['MAIL_SERVER'] = 'smtp.googlemail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
-app.config['MAIL_USERNAME'] = 'codesnnippetstests@gmail.com'
-app.config['MAIL_PASSWORD'] = '@Codesnnippetstests2021'
-app.config['MAIL_DEFAULT_SENDER'] = 'codesnnippetstests@gmail.com'
+app.config['MAIL_USERNAME'] = 'youraccount@gmail.com'
+app.config['MAIL_PASSWORD'] = '@yourgmailpassword'
+app.config['MAIL_DEFAULT_SENDER'] = 'youraccount@gmail.com'
 
 
 ##########################
