@@ -14,9 +14,6 @@ from sqlalchemy.ext.hybrid import hybrid_method, hybrid_property
 from flask_bcrypt import Bcrypt
 from datetime import datetime
 from forms import RegisterForm, LoginForm
-# from .forms import RegisterForm, LoginForm
-
-
 
 
 #create the object of Flask
@@ -166,7 +163,6 @@ def register():
     if request.method == 'POST':
         if form.validate_on_submit():
             try:
-            
                 email = form.email.data
                 username = form.username.data
                 password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
@@ -192,7 +188,6 @@ def login():
     if request.method == 'POST':
         if form.validate_on_submit():
             user = User.query.filter_by(email=form.email.data).first()
-            # if user is not None and user.is_correct_password(form.password.data):
             if user.email_confirmed==0:
                 flash('Your acount is not activated! Please open your email inbox and click activation link we sent to activate it', 'info')
             elif user is not None and user.verify_original_pass(form.password.data):
